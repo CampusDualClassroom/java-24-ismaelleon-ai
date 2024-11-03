@@ -5,13 +5,25 @@ import java.util.Queue;
 
 public class Exercise24 {
     public static Queue<String> createQueue() {
+        Queue<String> queue= new LinkedList<>();
+        queue.add("Smith");
+        queue.add("Montessori");
+        queue.add("Peralta");
+        queue.add("House");
 
+        return queue;
     }
-    public static void printAndEmptyQueue(Queue<String> queue) {
 
+    public static void printAndEmptyQueue(Queue<String> queue) {
+        while (!queue.isEmpty()) {
+            System.out.println(queue.poll());
+        }
     }
 
     public static void main(String[] args) {
+        Queue<String> queue = createQueue();
+        System.out.println("Primer elemento: " + queue.peek());
+        printAndEmptyQueue(queue);
 
     }
 
